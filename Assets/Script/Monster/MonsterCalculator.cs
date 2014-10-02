@@ -248,6 +248,8 @@ partial class MonsterCalculator : MonoBehaviour
             if (isGameOver() == true)
             {
                 GameoverText.text = "GAMEOVER";
+                GameoverText.fontSize = 45;
+                GameoverText.color = new Color32(124, 72, 33, 255);
                 isFinished = false;//юс╫ц?
             }
             else isFinished = true;
@@ -676,15 +678,21 @@ partial class MonsterCalculator : MonoBehaviour
             is_removed = true;
             combineChicken(group);
 
-            //yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.4f);
 
-            //yield return StartCoroutine(dropMonster());
+            yield return StartCoroutine(dropMonster());
+
+            chainingNum++;
+            //Debug.Log("chain up" + chainingNum);
+            yield return new WaitForSeconds(0.6f);
+            StartCoroutine(groupingChicken());
+            //StartCoroutine(groupingMonster());
         }
         //yield return StartCoroutine(dropMonster());
-        GroupManager.Instance.PrintMap();
+        //GroupManager.Instance.PrintMap();
 
         //isFinished = true;
-        yield return StartCoroutine(groupingMonster());
+        if (is_removed == false) yield return StartCoroutine(groupingMonster());
 
 
     }

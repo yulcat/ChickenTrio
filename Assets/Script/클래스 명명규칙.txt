@@ -1,0 +1,31 @@
+클래스 이름은 무조건 대문자로 시작, 단어별로 대문자로 구분
+
+변수 이름은 소문자로 시작, 단어별로 대문자로 구분
+
+클래스 변수는 public과 private를 명시해준다.
+
+private변수는 맨 앞에 _를 준다.
+
+함수 내의 지역 변수는 소문자로 시작, 단어 구분은 _(언더바)로 한다.
+
+property(Encalsulated filed)는 public 변수와 같다.
+
+함수는 public과 private를 명시해준다.
+
+함수의 이름은 대문자로 시작하고 단어별로 대문자로 구분한다.(클래스와 동일)
+
+Class와 Method의 경우는 중괄호의 시작을 다음 줄에 쓰고, 
+for문 , while문과 같은 조건, 반복문은 중괄호를 연결하여 쓴다.
+
+public partial class로 변수 , Unity에서 사용되는 함수(Start, Update), 자체적으로 제작한 함수를 구분한다.
+
+가급적 한 스크립트파일은 120줄을 넘지 않도록 한다. 
+이것이 넘을 경우 과연 그 클래스가 하나의 책임을 가지는지 의심해 본다.(Single Responsibility Principle)
+
+같은 코드가 중복되어 여러 곳에 쓰여지지 않도록 한다.(Don't Repeat Yourself)
+
+Static함수에서는 오직 주어진 인자만 사용해야 한다.
+
+enum객체는 첫 글자에 e를 적는다.
+
+SingleTon은 삽질하지 말고 TestClass꺼 같다 붙여놓고 이름만 바꿔준다.

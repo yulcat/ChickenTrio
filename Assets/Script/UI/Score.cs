@@ -16,20 +16,42 @@ partial class Score : MonoBehaviour
     }
 }
 
-partial class Score : MonoBehaviour {
+partial class Score : MonoBehaviour
+{
     private int scoreValue;
 }
 
-partial class Score : MonoBehaviour {
-	// Use this for initialization
-	void Start () {
+partial class Score : MonoBehaviour
+{
+    // Use this for initialization
+    void Start()
+    {
         scoreValue = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	    
-	}
+        if (Camera.main.aspect < 0.6)
+        {
+            guiText.fontSize = 20;
+            guiText.transform.position = new Vector3(0.5f, 0.87f, 0f);
+            Debug.Log("16:9"); //0.56
+        }
+        else if (Camera.main.aspect < 0.7)
+        {
+            guiText.fontSize = 22;
+            guiText.transform.position = new Vector3(0.52f, 0.94f, 0f);
+            Debug.Log("3:2"); //0.67
+        }
+        else
+        {
+            guiText.fontSize = 23;
+            guiText.transform.position = new Vector3(0.52f, 0.94f, 0f);
+            Debug.Log("4:3");  //0.75
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
     void OnGUI()
     {
         guiText.text = scoreValue.ToString();

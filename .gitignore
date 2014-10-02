@@ -5,6 +5,13 @@ Temp/
 Obj/
 UnityGenerated/
 Library/
+build/
+.svn/
+
+# ================== #
+# Sunblime generated #
+# ================== #
+*.sublime-workspace
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -19,7 +26,7 @@ ExportedObj/
 *.user
 *.unityproj
 *.booproj
- 
+
 # ============ #
 # OS generated #
 # ============ #
