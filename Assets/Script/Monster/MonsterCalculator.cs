@@ -251,6 +251,7 @@ partial class MonsterCalculator : MonoBehaviour
                 GameoverText.fontSize = 45;
                 GameoverText.color = new Color32(124, 72, 33, 255);
                 isFinished = false;//юс╫ц?
+				RankingUIInGame.Get().OnGameEnd(Score.Instance.getScore());
             }
             else isFinished = true;
 
@@ -768,7 +769,9 @@ partial class MonsterCalculator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetKeyUp (KeyCode.A)) {
+			RankingUIInGame.Get().OnGameEnd(Score.Instance.getScore());
+		}
 	}
 }
 
