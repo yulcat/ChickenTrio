@@ -769,9 +769,6 @@ partial class MonsterCalculator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyUp (KeyCode.A)) {
-			RankingUIInGame.Get().OnGameEnd(Score.Instance.getScore());
-		}
 	}
 }
 

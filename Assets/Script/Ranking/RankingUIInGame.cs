@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class RankingUIInGame : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class RankingUIInGame : MonoBehaviour {
 
 	void Awake() {
 		instance = this;
+		isSended = false;
 	}
 
 	public GameObject newRecord;
@@ -18,23 +20,19 @@ public class RankingUIInGame : MonoBehaviour {
 	int score = 0;
 	string name = string.Empty;
 
+	bool isSended = false;
+
 	public void OnGameEnd(int score) {
 		this.score = score;
 		isReceived = false;
-		GetRanking.Get (OnReceiveRanking, () => {});
+		if (isSended == false) {
+			isSended = true;
+			GetRanking.Get (OnReceiveRanking, () => {});
+		} else {
+			Debug.LogWarning("Ranking save request duplicated.");
+		}
 	}
 
-//	public IEnumerator TimeOutCheck() {
-//		float startTime = Time.timeSinceLevelLoad;
-//
-//		while (startTime + 1 < Time.timeSinceLevelLoad) {
-//			yield return null;
-//		}
-//
-//		if (isReceived == false) {
-//			Application.LoadLevel("title");
-//		}
-//	}
 	TouchScreenKeyboard keyboard;
 	void ShowNameEnter() {
 		newRecord.SetActive (true);
@@ -43,12 +41,13 @@ public class RankingUIInGame : MonoBehaviour {
 
 	void Update() {
 		if (keyboard != null && keyboard.done) {
-			name = keyboard.text.Substring(0, 10);
+			name = new string(keyboard.text.Take(10).ToArray());;
 			if (!string.IsNullOrEmpty(name)) {
 				StartCoroutine(SetScore(name, score));
 			} else {
 				Debug.LogError("Name is not valid.");
 			}
+			keyboard = null;
 		}
 	}
 

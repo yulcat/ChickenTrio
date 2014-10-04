@@ -614,7 +614,7 @@ MonoBehaviour:
   spriteCollectionName: MonsterCollection_new
   invOrthoSize: .1875
   halfTargetHeight: 480
-  buildKey: 865098556
+  buildKey: 231355157
   dataGuid: ce8108ef9cce5e54cb91fe74a0d96792
 --- !u!1001 &100100000
 Prefab:
