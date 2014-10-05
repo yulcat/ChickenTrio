@@ -84,6 +84,14 @@ partial class MonsterCalculator : MonoBehaviour
         }
         return 1;
     }
+	public bool isLineFull(int x)
+	{
+		for (int y = Const.TileHeight; y > 0; y--)
+		{
+			if (getMonsterData(y, x) == 0) return false;
+		}
+		return true;
+	}
     public int getMonsterHoleHeight(int x)
     {
         for (int i = 1; i < Const.TileHeight + 1; i++)
@@ -916,8 +924,11 @@ partial class MonsterCalculator : MonoBehaviour
     {
         for (int i = 0; i < Const.TileWidth; i++)
         {
-            int height = getMonsterHeight(i + 1) - 1;
-            if (height < 7) return false;
+			bool isFull = isLineFull(i + 1);
+			if (isFull == false)
+			{
+				return false;
+			}
         }
         return true;
     }
