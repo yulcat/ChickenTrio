@@ -40,6 +40,9 @@ public class RankingUIInGame : MonoBehaviour {
 	}
 
 	void Update() {
+        if (keyboard != null) {
+            newRecord.GetComponentInChildren<TextMesh>().text = keyboard.text;
+        }
 		if (keyboard != null && keyboard.done) {
 			name = new string(keyboard.text.Take(10).ToArray());;
 			if (!string.IsNullOrEmpty(name)) {
