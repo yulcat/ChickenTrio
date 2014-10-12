@@ -12,6 +12,13 @@ public class MenuinGame : MonoBehaviour {
 	void Start () {
 	
 	}
+
+	public void CloseAskToQuit() {
+		if (askbox != null) {
+			Destroy(askbox);
+		}
+		isBoxThere=false;
+	}
 	
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Escape)&&!isBoxThere) 
