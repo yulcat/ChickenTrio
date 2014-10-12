@@ -367,7 +367,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 346596270}
   m_GameObject: {fileID: 788247485}
-  m_Mesh: {fileID: 1498183826}
+  m_Mesh: {fileID: 1823005023}
 --- !u!114 &788247489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: title
---- !u!43 &1498183826
+--- !u!43 &1823005023
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}

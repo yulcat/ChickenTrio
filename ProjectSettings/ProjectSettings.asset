@@ -70,8 +70,8 @@ PlayerSettings:
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: f17e648560c883a4db9b1d9deb78c14d
-  iPhoneBundleVersion: 1.1
-  AndroidBundleVersionCode: 2
+  iPhoneBundleVersion: 1.2
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -99,7 +99,7 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: 
+  AndroidKeystoreName: H:/ftp/myandroid.keystore
   AndroidKeyaliasName: 
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:

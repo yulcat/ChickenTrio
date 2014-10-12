@@ -35,12 +35,12 @@ MonoBehaviour:
     - background_Score
     - background_main3-1 1
     - newrecord
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    - HighScore
+    - backgroung
+    - replay
+    - replay_click
+    - totitle
+    - totitle_click
     - tu3
     - tu1
     - tu6
@@ -49,18 +49,25 @@ MonoBehaviour:
     - tu4
     - tu2
     - background_polished
+    - ask
+    - no
+    - no_click
+    - yes
+    - yes_click
+    - askname
+    - textbox
     spriteTextureGUIDs:
     - 1899d872aab9442af84d00fa22478e22
     - cc1debc134cc90c4aa5b7f070b8485ee
     - 0a71339a2f9f03d438dc2bf203a0b24d
     - 5bef710fcc5c81a4899f965065793e86
     - 47a62546f4dbf4515974bc905883ee26
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    - e2822216c42f590479d0c9427ec2434c
+    - c90610349b65ee943b9335e88c0a8dba
+    - 6825e1ea52d414141a686d2db3d1d11d
+    - 7514617f5fc2e56428f502feedc07580
+    - 359386e93984cb844bdbfce0a8e04fc5
+    - d4bd6cf8fd0f2bd42a0b297a713b60c8
     - 15da3546e8ceeda4a98592844f7f442a
     - 233ca038a257f324cb8a144ee11151fb
     - 3c7a3bffed0e27444ac756f6c8d88417
@@ -69,6 +76,13 @@ MonoBehaviour:
     - c524f4e84287a0b47acd1600e8864cf4
     - e797f8e052dafb74382fecb91d398609
     - cbc825a3d85f89243b6547d6c0c70bc6
+    - e53f399fa64b8e44c8b5d42b00c1c008
+    - 4d27e3fb25ab06b48814676bbf13c5e9
+    - 8c669fda94431fa49811f59e61a97afd
+    - 44ea04d1da5eb8b408442e6245b3701e
+    - 8726458d84441a84488f4529139ec501
+    - eb7b8786d0ff84049a38745eb356c279
+    - 10813cdc993f0e044924d73f73b8ec7f
     version: 3
   - name: MonsterCollection_new
     spriteCollectionGUID: 55441a91fefc2fb478177eba072b3e91
